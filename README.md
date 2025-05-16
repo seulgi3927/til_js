@@ -1708,10 +1708,10 @@ function calcurator(symbol, a, b) {
 ### 5.6. 다양한 함수 예제
 
 ```js
-/** 
+/**
  * 메시지를 콘솔에 출력하기
  * @param {string} message - 출력할 메시지
-*/
+ */
 function showMessage(message) {
   console.log(message);
 }
@@ -1732,11 +1732,11 @@ function showArr(arr) {
 ```
 
 ```js
-/** 
+/**
  * 객체의 속성 값을 출력하는 기능
  * @param { {id:number, nickName:string, age:number} } user - 사용자 객체
-*/
-function showUser(user){
+ */
+function showUser(user) {
   console.log(user.id);
   console.log(user.nickName);
   console.log(user.age);
@@ -1829,10 +1829,10 @@ function 함수명(매개변수) {
 }
 ```
 
-- 2. `변수의 값`으로 함수를 만드는 법 
+- 2. `변수의 값`으로 함수를 만드는 법
 
 ```js
-const 변수명 = function(매개변수) {  
+const 변수명 = function (매개변수) {
   return 결과값;
 };
 변수명(매개변수);
@@ -1869,7 +1869,7 @@ test(minusFun);
 
 ```js
 add(); // 호이스팅이 되므로 괜찮다.
-addFN(); // 호이스팅 에러 발생한다. (주의하자) 함수 만들기 전에 실행불가. 
+addFN(); // 호이스팅 에러 발생한다. (주의하자) 함수 만들기 전에 실행불가.
 function add() {}
 const addFN = function () {};
 // 이런거 신경쓰기 싫으면 함수를 맨 윗줄에 작성하면 된다.ㅋ
@@ -1897,7 +1897,7 @@ const addFN = function () {};
 #### 7.2. 함수 만드는 법
 
 - `{}` 로 코드 블럭을 이용해서 묶어준다.
-- 이름을 짓는데, `동사`로 지어준다. ( 기본 : Camel, 생성자함수: Pascal ) 
+- 이름을 짓는데, `동사`로 지어준다. ( 기본 : Camel, 생성자함수: Pascal )
 - 이름 뒤에 `()` 를 작성한다.
 - 이름 뒤에 `(재료, 재료)` 를 작성한다.
 - 이름 뒤에 `(매개변수, 매개변수)` 를 작성한다.
@@ -1907,7 +1907,7 @@ const addFN = function () {};
 
 ### 7.3. 함수 사용법(`호출, Call` 등으로 명칭함)
 
-- 함수명(); 
+- 함수명();
 - 함수명을 호출했다.
 - 함수명을 Call 했다.
 
@@ -1915,8 +1915,8 @@ const addFN = function () {};
 
 - 넓이를 계산하는 기능, 그런데 2번 이상 사용, 누군가에게 공유
 
-```js
-/** 
+````js
+/**
  * 너비를 계산해 주는 함수
  * @param {number} _width
  * @param {number} _height
@@ -1925,16 +1925,16 @@ const addFN = function () {};
  * ```js
  *  const result = calcRect(5, 4);
  * ```
-*/
-function calcRect(_width, _height){
-  return _width * _height
+ */
+function calcRect(_width, _height) {
+  return _width * _height;
   // 추후에 무수하게 예외처리 코드가 작성이 된다.
   // 업데이트 진행
 }
 // 함수호출
 const result = calcRect(5, 4);
 console.log(result);
-```
+````
 
 ## 7.5. 함수에 추가 지식
 
@@ -1948,7 +1948,7 @@ function 함수명(매개변수 = 기본값) {}
 
 ```js
 function 함수명(매개변수1, 매개변수2) {
-  const params = arguments; // 배열로 접근 가능  
+  const params = arguments; // 배열로 접근 가능
 }
 함수명(1, 2, 3, 4, 5);
 ```
@@ -1957,13 +1957,12 @@ function 함수명(매개변수1, 매개변수2) {
 
 ```js
 function 함수명(매개변수1, 매개변수2, ...res) {
-  const params = res; // 배열로 접근 가능  
+  const params = res; // 배열로 접근 가능
 }
 함수명(1, 2, 3, 4, 5);
 ```
 
 - 기본 함수 작성법 2가지
-
 
 ```js
 // 기본 함수 정의
@@ -1971,15 +1970,15 @@ function 함수명() {}
 ```
 
 - 함수를 `표현식(Expression)`으로 만드는법
-- 변수에 함수를 담는 이유는 `함수에 매개변수`에 전달하려고 
+- 변수에 함수를 담는 이유는 `함수에 매개변수`에 전달하려고
 
 ```js
 // 함수 표현식 정의
 const 함수명 = function () {}; // 변수에 함수를 담는것
 
-const add = function (){}
+const add = function () {};
 function calcFunc(_fn) {
-  add(); 
+  add();
 }
 calcFunc(add);
 ```
@@ -2267,13 +2266,13 @@ console.log("함수 실행후 : ", brand);
 ### 10.4. 객체에 속성으로 만든 함수에서의 this
 
 - 객체에서의 this 는 객체 전체를 가르킨다.
-- 어? function 사용하니까 `this 가 상황에 따라서 변하는데?` 
+- 어? function 사용하니까 `this 가 상황에 따라서 변하는데?`
 
 ```js
 const Person = {
   name: "아이유",
   age: 20,
-  sayHi: function() {
+  sayHi: function () {
     console.log(this);
   },
 };
@@ -2285,7 +2284,7 @@ const Person = {
 
 ```js
 // 대문자 즉 Pascal
-function Coffee(){
+function Coffee() {
   console.log(this);
 }
 
@@ -2650,14 +2649,15 @@ bt.addEventListener("click", function () {});
 
 - `객체 리터럴`로 생성한다.
 - `리터럴(literal)` 이라는 단어는 꼭 정의해 두세요.
- - 리터럴은 정해진 `값을 개발자가 직접 작성`해 주는 것.
- - 숫자 리터럴, 문자열 리터럴, 배열 리터럴, 객체 리터럴 등
+- 리터럴은 정해진 `값을 개발자가 직접 작성`해 주는 것.
+- 숫자 리터럴, 문자열 리터럴, 배열 리터럴, 객체 리터럴 등
 
 ```js
-const 객체 = { // 객체 리터럴
+const 객체 = {
+  // 객체 리터럴
   객체키명: 키값,
-  객체키명: 키값
-};  
+  객체키명: 키값,
+};
 ```
 
 - 만약 객체를 1개씩 만든다면 즉, `객체리터럴로 생성한다`면 객체명은 `Camel Case`로
@@ -2666,7 +2666,7 @@ const 객체 = { // 객체 리터럴
 const personInfo = {
   nickname: "아이유",
   age: 20,
-  job: "singer"
+  job: "singer",
 };
 ```
 
@@ -2728,15 +2728,18 @@ const student_1 = {
   name: "홍길동",
   age: 20,
   // 정확하게는 Property 로 기능 정의하기
-  sayName: function(){ this.name; // 객체
+  sayName: function () {
+    this.name; // 객체
   },
   // 화살표 함수는 곤란합니다. (주의하자)
-  sayAge: () => { this.age; // window
+  sayAge: () => {
+    this.age; // window
   },
   // 가장 최신 문법으로서 정확히 메소드 임을 표현
-  sayHi() {}, 
-};  
+  sayHi() {},
+};
 ```
+
 - 위의 `객체 생성자 함수` 로 수정해 보자.
 
 ```js
@@ -2760,7 +2763,7 @@ Student.prototype.sayHi = function(){}
 const student_1 = new Student("홍길동", 20)
 ```
 
-- 클래스로 만들어 보자. (지금 괜찮다. 활용도 떨어진다.) 
+- 클래스로 만들어 보자. (지금 괜찮다. 활용도 떨어진다.)
 
 ```js
 class Student {
@@ -2802,7 +2805,7 @@ const 배열명 = new Array(3); // 방3칸 준비해 이런 뜻이 됨 (숫자�
 ### 15.2 배열의 요소를 인덱스로 찾기
 
 ```js
-const 배열 = [1, "안녕", false, function(){}] 
+const 배열 = [1, "안녕", false, function () {}];
 배열[0];
 배열[1];
 배열[2];
@@ -2813,13 +2816,13 @@ const 배열 = [1, "안녕", false, function(){}]
 ### 15.3. 배열도 객체라서 `속성`이 있어요.
 
 ```js
-const 배열 = [1,3,5];
-배열.length // 3개 
+const 배열 = [1, 3, 5];
+배열.length; // 3개
 ```
 
 ### 15.4. 무지막지하게 데이터 종류 중 배열을 다룹니다.
 
-- 일반적 데이터 형태 : `[{},{},{},{}]` 
+- 일반적 데이터 형태 : `[{},{},{},{}]`
 - 배열을 프로그램이에서 많이 다루므로 `미리 함수를 제공`함(빌트인 함수).
 - 주의사항으로서 절대로 `원본을 훼손하지 마셔야 합니다`(불변성 유지).
 
@@ -2965,7 +2968,7 @@ console.log(result4);
 - 원본 배열의 요소에 동일한 함수 실행 후 새로운 배열로 생성
 
 ```js
-const originArr = ["홍길동", "고길동", "김수한무"];
+const originArr = ["홍길동", "고길동", "김수한무"]; // ↓ 정말 자주 쓰는거니 잘 알아두면 좋다.
 const copyArr = originArr.map(function (item, index, arr) {
   // console.log(`item : ${item}, index: ${index}`);
   const tag = `<div class="user-info">${item}</div>`;
@@ -3058,6 +3061,7 @@ console.log("total : ", total);
 
 #### 15.6.6. join();
 
+- 아마도 많이 사용할 거예요. 정말로요.
 - 문자열로 배열을 연결한 결과를 만든다.
 
 ```js
@@ -3087,9 +3091,256 @@ console.log(`typeof ${typeof result} , ${result}`);
 
 ```js
 const numArr1 = [1, 2, 3, 4];
-// 기본은 ,  연결된 글자
 const result = numArr1.includes(3);
 console.log(`typeof ${typeof result} , ${result}`);
 // typeof boolean , true
 ```
 
+## 16. 객체(`{}`) 와 배열(`[]`)의 필수 이해 사항
+
+### 16.1. 반복문
+
+- 배열에서 사용하는 경우의 반복문 문법
+
+```js
+const arr = [1, 2, 3, 4];
+
+// 가장 전통적인 방식
+for (let i = 0; i < arr.length; i++) {
+  console.log(arr[i]);
+}
+
+// 배열의 요소 반복문 버전
+arr.forEach(function (item) {
+  console.log(item);
+});
+
+// 배열의 for of 문
+for (const item of arr) {
+  console.log(item);
+}
+
+// 배열의 map :  새로운 배열을 만듦
+const now = arr.map(function (item) {
+  return item;
+});
+```
+
+- 객체에서 사용하는 경우의 반복문 문법
+
+```js
+const person = {
+  age: 10,
+  nickName: "hong",
+  isMember: false,
+};
+
+// 객체의 속성명 알아내기
+for (let key in person) {
+  console.log(key); // age, nickName, isMember
+}
+
+// 객체의 속성에 보관하는 값 알아내기
+for (let key in person) {
+  console.log(person[key]); // 10, hong, false
+}
+```
+
+### 16.2. 값을 추출해서 보관하기
+
+- 배열
+
+```js
+const arr = ["사과", "딸기", "참외"];
+// 아래처럼 요소 값을 알아내는 것은 비추천
+arr[0];
+arr[1];
+arr[2];
+
+// 반복문으로 알아내기
+for (let i = 0; i < arr.length; i++) {
+  arr[i];
+}
+```
+
+- `배열 Spread 문법 : 별이 5000 만개`
+  - 배열의 요소를 알아내고,
+  - 배열의 요소를 복사하고,
+  - 새로운 배열에 담아주고
+
+```js
+const arr = ["사과", "딸기", "참외"];
+
+// 아래처럼 하지는 않습니다.
+const apple = arr[0];
+const straw = arr[1];
+const melon = arr[2];
+
+// 배열 Spread 문법
+const [apple, straw, melon] = [...arr];
+
+// 두 배열을 Spread 문법으로 합치기
+const numArr = [1, 2, 3];
+const strArr = ["a", "b", "c"];
+// [1, "a", "b", "c", 2, 3]
+// 아래처럼 권장하지는 않습니다.
+const sampleArr = [1, strArr[0], strArr[1], str[2], 2, 3];
+// Spread 활용
+const resultArr = [1, ...strArr, 2, 3];
+// 구분하세요. (Rest 파라메터 문법)
+function showArr(...rest) {}
+```
+
+- 객체 : `별이 5000만개`
+
+```js
+const person = {
+  age: 10,
+  nickName: "hong",
+  isMember: false,
+};
+
+// 아래처럼 하지 않습니다.
+const newPerson = {
+  age: person.age,
+  nickName: person.nickName,
+  isMember: person.isMember,
+};
+
+// 객체 Spread 문법
+const nowPerson = { ...person };
+
+// 두개의 객체 를 합치기
+const a = { age: 10, name: "hong" };
+const b = { city: "대구", year: 2025 };
+const result = { ...a, ...b };
+// 결과 {age: 10, name: "hong", city: "대구", year: 2025 }
+
+// 원본 객체 복사하고 새로운 속성 추가하기
+const ori = { a: 1, b: "안녕" };
+const now = { ...ori, gogo: "happy" };
+// now {a:1, b:"안녕", gogo:"happy" }
+
+// 함수에 매개변수로 객체를 복사해서 전달하기
+function show({ name, age }) {
+  console.log(name);
+  console.log(age);
+}
+
+const user = { name: "아이유", age: 20 };
+show({ ...user });
+```
+
+## 17. 비동기(Asyncronous) 통신
+
+- `비동기`는 시간이 오래 걸리는 작업
+- 예) 데이터 서버에서 자료를 요청(Request) 및 응답(Response)
+- 예) 데이터 서버에서 파일 전송 시
+- 비동기 작업 중에 결과를 기다리지 않고 다른 작업을 병렬로 실행하도록
+
+### 17.1. 비동기 작업 문법 종류
+
+- XHR (Xml Http Request)
+- Callback
+- Promise
+- async/await
+
+### 17.2. 데모용 API 사이트
+
+- https://jsonplaceholder.typicode.com
+- https://www.data.go.kr/index.jsp
+
+### 17.3. XHR
+
+- 서버와 통신하는 작업을 위해서 기본적으로 제공이 됨.
+- `Request` : 요청, url 로 자료를 요청한다.
+- `Response` : 응답, url 로 부터 자료를 돌려받는다.
+- status 200 류의 값 : 정상적으로 자료를 응답함.
+- status 400 류의 값 : url 이 존재하지 않음.
+- status 500 류의 값 : 데이터 서버가 오류거나 전원이 꺼짐.
+- https://developer.mozilla.org/ko/docs/Web/HTTP/Reference/Status
+
+```js
+// 데이터 서버에 자료를 호출함.
+
+// 1. xhr 객체 한개 만듦
+const xhr = new XMLHttpRequest();
+
+// 2. 주소를 연결함
+// 백엔드 호출시 메소드 5가지 (RestAPI 라고 함)
+// GET   : 자료를 주세요.
+// POST  : 자료를 추가합니다.
+// DELETE : 자료를 삭제해 주세요.
+// PUT   :  자료 전체를 수정해 주세요.
+// PATCH :  자료 내용에서 일부분만 수정해 주세요.
+xhr.open("GET", "https://jsonplaceholder.typicode.com/photos");
+
+// 3. 웹브라우저로 요청을 합니다.
+xhr.send();
+
+// 4. 요청 이후 응답이 오기를 기다린다.
+xhr.onload = function () {
+  console.log("요청이 되어졌을 때 백엔드 회신정보 : ", xhr);
+  if (xhr.status === 200) {
+    console.log("정상적인 Response 됨");
+  } else if (xhr.status === 404) {
+    console.log("주소가 잘못되었네요.");
+  } else if (xhr.status === 505) {
+    console.log("서버에 오류입니다. 잠시 후 시도해 주세요.");
+  }
+};
+```
+
+### 17.4. Callback 활용하기
+
+- 자료 응답 후 처리하기
+
+```js
+// 데이터 서버에 자료를 호출함.
+
+function getData(api = "posts", fn) {
+  // 1. xhr 객체 한개 만듦
+  const xhr = new XMLHttpRequest();
+  // 2. 주소를 연결함
+  xhr.open("GET", `https://jsonplaceholder.typicode.com/${api}`);
+  // 3. 웹브라우저로 요청을 합니다.
+  xhr.send();
+
+  // 4. 요청 이후 응답이 오기를 기다린다.
+  xhr.onload = function () {
+    //console.log("요청이 되어졌을 때 백엔드 회신정보 : ", xhr);
+    if (xhr.status === 200) {
+      // console.log("정상적인 Response 됨 : ", xhr.response);
+      // 콜백함수 : 자료가 오면 자료를 활용하고 싶다.
+      fn(xhr.response);
+    } else if (xhr.status === 404) {
+      console.log("주소가 잘못되었네요.");
+    } else if (xhr.status === 505) {
+      console.log("서버에 오류입니다. 잠시 후 시도해 주세요.");
+    }
+  };
+}
+// 콜백함수 만들기 : 자료가 들어오면 처리함.
+const postsParser = function (res) {
+  console.log(res);
+};
+const commentsParser = function (res) {};
+const albumsParser = function (res) {};
+const photosParser = function (res) {};
+const todosParser = function (res) {};
+const usersParser = function (res) {};
+// 함수 사용
+getData("posts", postsParser);
+getData("comments", commentsParser);
+getData("albums", albumsParser);
+getData("photos", photosParser);
+getData("todos", todosParser);
+getData("users", usersParser);
+```
+
+### 17.5. Promise 활용하기
+
+- 서버 연동이 끝날 때 원하는 콜백함수 실행
+- 2개의 매개변수를 전달 받는다.
+- resolve 콜백함수 : 성공시 실행함수
+- reject 콜백함수 : 실패시 실행함수
