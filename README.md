@@ -3396,10 +3396,9 @@ getData("posts")
 - 1단계
 
 ```js
-async function getAllData(){
-  try{
-
-  } catch (error) {};
+async function getAllData() {
+  try {
+  } catch (error) {}
 }
 
 getAllData();
@@ -3442,4 +3441,3 @@ async function getAllData() {
 
 getAllData();
 ```
-
